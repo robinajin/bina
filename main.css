@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p {
+    font-size: clamp(10px, 1vw, 10px);
+    line-height: 1.2;
+    width: 90%;
+    max-width: 950px;
+    text-align: justify;
+    background: url('image.jpeg') no-repeat center center;
+    background-size: contain; /* Ensures the full image is visible */
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    color: transparent;
+    word-break: break-word;
+    min-height: 60vh; /* Increase height to fit the image */
+    display: block;
+}
+
+/* Ensure better text visibility on smaller screens */
+@media (max-width: 800px) {
+    p {
+        font-size: clamp(12px, 4vw, 18px);
+        width: 95%;
+        min-height: 50vh; /* Adjust height for smaller screens */
+    }
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #f94d6a, #ff4757);
+    transform: scale(1.1);
+}
